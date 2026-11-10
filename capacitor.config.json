@@ -1,0 +1,8 @@
+{
+  "appId": "com.rewardzone.app",
+  "appName": "RewardZone",
+  "webDir": "www",
+  "server": {
+    "url": "https://kall-gamer.github.io/Reward-zone/"
+  }
+}
