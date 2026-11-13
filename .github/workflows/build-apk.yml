@@ -18,7 +18,11 @@ jobs:
           distribution: temurin
           java-version: 17
       - run: npm install
+      - run: sudo apt-get install -y fonts-dejavu-core
+      - run: python3 -m pip install --break-system-packages pillow
+      - run: python3 make_icon.py
       - run: npx cap add android
+      - run: npx --yes @capacitor/assets generate --android
       - run: npx cap sync android
       - run: chmod +x android/gradlew && cd android && ./gradlew assembleDebug
       - run: cp android/app/build/outputs/apk/debug/app-debug.apk RewardZone.apk
